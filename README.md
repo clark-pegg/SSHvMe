@@ -9,8 +9,9 @@ This has nothing to do with the project.
 
 1. Programming in Python using low-levels libraries.
 2. Usage of sockets to communicate between devices over a network.
-3. <s>Usage of assymetric encryption to secure traffic over a network.</s>
-4. <s>Implementation of a secure password system.</s>
+3. Understanding of multi-threading and basic implementation.
+4. <s>Usage of assymetric encryption to secure traffic over a network.</s>
+5. <s>Implementation of a secure password system.</s>
 
 ## Things to Add
 1. Currently uses stdin and stdout (as well as stderr) for communication.

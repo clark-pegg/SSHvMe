@@ -22,7 +22,6 @@ def main(address):
 
       sock.send(command.encode("utf-8") + b"\n")
     
-  
 if __name__ == '__main__':
   address = sys.argv[1]
 
