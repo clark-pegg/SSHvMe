@@ -10,7 +10,7 @@ def main():
 
     ip = f"{conn.getpeername()[0]}:{conn.getpeername()[1]}"
 
-    print("Client connection from: " + ip)
+    print("Client connection from " + ip)
 
     pid = os.fork()
 
@@ -21,9 +21,9 @@ def main():
 
       try:
         conn.shutdown(socket.SHUT_RDWR)
-        print("Client disconnection from: " + ip)
+        print("Client disconnection from " + ip)
       except:
-        print("Unexpected client disconnection from: " + ip)
+        print("Unexpected client disconnection from " + ip)
       finally:
         break
     
