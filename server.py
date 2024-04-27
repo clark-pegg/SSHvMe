@@ -8,7 +8,7 @@ def main():
   while(True):
     (conn, _) = sock.accept()
 
-    print("Client connection from: " + conn.getsockname()[0])
+    print("Client connection from: " + conn.getpeername()[0])
 
     pid = os.fork()
 
@@ -20,9 +20,9 @@ def main():
       try:
         conn.shutdown(socket.SHUT_RDWR)
 
-        print("Client disconnection from: " + conn.getsockname()[0])
+        print("Client disconnection from: " + conn.getpeername()[0])
       except:
-        print("Unexpected client disconnection from: " + conn.getsockname()[0])
+        print("Unexpected client disconnection from: " + conn.getpeername()[0])
       finally:
         break
     
