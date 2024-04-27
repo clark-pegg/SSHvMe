@@ -3,7 +3,7 @@
 ## Overview
 Very simple utility for interacting with a shell over a network.
 
-## Skills Display
+## Skills Displayed
 This project was started to add to my portfolio so displaying skills is one of its primary purposes.
 This has nothing to do with the project.
 
