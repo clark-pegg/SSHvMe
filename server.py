@@ -1,7 +1,7 @@
 import socket, os, subprocess, re, signal
 
 def main():
-  sock = socket.create_server(("127.0.0.1", 4444))
+  sock = socket.create_server((get_ip(), 4444))
 
   sock.listen()
 
@@ -26,8 +26,8 @@ def main():
       finally:
         break
     
-# def get_ip(): # Uses the first non-loopback IPv4 address
-#   return re.findall("inet (?P<addr>.*)/24 brd", subprocess.run(["ip", "addr"], capture_output=True).stdout.decode("utf-8"))[0]
+def get_ip(): # Uses the first non-loopback IPv4 address
+  return re.findall("inet (?P<addr>.*)/24 brd", subprocess.run(["ip", "addr"], capture_output=True).stdout.decode("utf-8"))[0]
 
 if __name__ == '__main__':
   main()

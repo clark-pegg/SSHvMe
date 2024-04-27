@@ -2,8 +2,8 @@ import socket, signal, os, time, sys
 
 BUFFER_SIZE = 1024
 
-def main():
-  sock = socket.create_connection(("127.0.0.1", 4444))
+def main(address):
+  sock = socket.create_connection((address, 4444))
 
   pid = os.fork()
 
@@ -24,4 +24,6 @@ def main():
     
   
 if __name__ == '__main__':
-  main()
+  address = sys.argv[1]
+
+  main(address)
